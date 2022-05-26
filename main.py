@@ -106,11 +106,11 @@ def statistics():
     max_blood_test = blood_test_table.blood_test.max()
 
     print(""" 5. After data processing at the previous stages, the blood_test column has three values: 
-                t = a blood test was taken, 
-                f = a blood test wasn't taken, and 
-                0 = there is no information. 
-                In which hospital the blood test was taken the most often? 
-                How many blood tests were taken?""")
+            t = a blood test was taken, 
+            f = a blood test wasn't taken, and 
+            0 = there is no information. 
+        In which hospital the blood test was taken the most often? 
+        How many blood tests were taken?""")
     print()
     print("     " + str(blood_test_table.index[blood_test_table['blood_test'] == max_blood_test][0]).capitalize(), "had the most with", str(max_blood_test), "blood tests taken.")
     print()
