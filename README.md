@@ -12,7 +12,7 @@ The CSV files for the 3 hospitals are in the 'test' folder of the repository.
 
 Files are added to the test folder in the project folder and loaded into the file using read_csv() method of the pandas module.
 
-Files are then compared and UPDATED so that all the columns match. They are then merged into one single dataset for improving, training and testing. Redundant columns are deleted.
+Files are then compared and updated so that all the columns match. They are then merged into one single dataset for improving, analyzing and plotting. Redundant columns are deleted.
 
 
 ## Stage 2: Improving Dataset
@@ -24,8 +24,7 @@ Once the dataset is ready, it is time to process it. To do that, the first step 
 - Replace the NaN values in the bmi, diagnosis, blood_test, ecg, ultrasound, mri, xray, children, months columns with zeroes.
 
 Once the NaN values are handled, values are corrected and normalized.
-Let's take a closer look at the gender column. It's a big mess: there we have female, male, man, woman. You need to correct the data in this column. 
-The values should be either f or m. 
+Let's take a closer look at the gender column. It's a big mess: there we have female, male, man, woman. Data is to be corrected in this column. The values should be either f or m. 
 
 
 ## Stage 3: Statistical Analysis
@@ -73,7 +72,7 @@ The following graphs will be plotted and the questions will be answered:
 	
 - Build a violin plot of height distribution by hospitals. What is the main reason for the gap in values? Why there are two peaks, which correspond to the relatively small and big values?
 	<p align="center"><img src = "./images/violin_plot.png?raw=true" width=66%></p>
-	The gap between values as well as the presence of two peeks can be explained by the use of two different measurement systems. As the height in both prenatal and general is the meter while the sports hospital uses the imperial system, feet where 1 foot is 0.3048 meters
+	The gap between values as well as the presence of two peeks can be explained by the use of two different measurement systems. As the height in both prenatal and general is measured in meters while the sports hospital uses the imperial system (feet), where 1 foot is 0.3048 meters.
 
 <p align="center"><img src = "./images/plot_data.png?raw=true" width=66%></p>
 
