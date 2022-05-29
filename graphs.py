@@ -5,6 +5,7 @@ import numpy as np
 
 # Method to create age histogram
 def plot_age_histogram(ages):
+
     # create the histogram
     plt.hist(ages, bins=[0, 15, 35, 55, 70, 80], color='lightblue', edgecolor='black')
 
@@ -20,6 +21,7 @@ def plot_age_histogram(ages):
 
 # diagnosis is the series extracted from the hospitals dataframe and then converted to a list
 def plot_diagnosis_pie_char(diagnosis):
+
     # the unique names of diagnosis
     labels = np.unique(np.array(diagnosis))
 
