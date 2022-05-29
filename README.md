@@ -36,7 +36,7 @@ These questions will be answered using statistical methods:
 
 - Which hospital has the highest number of patients?
 	
-    Using mode() function, hospital with the most number of patients is extracted.
+    Using mode() function, hospital with the highest number of patients is extracted.
 
 - What share of the patients in the general hospital suffers from stomach-related issues? Round the result to the third decimal place?
 
