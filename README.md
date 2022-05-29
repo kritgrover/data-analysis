@@ -10,10 +10,23 @@ The CSV files for the 3 hospitals are in the 'test' folder of the repository.
 
 ## Stage 1: Taking Input
 
-Files are added to the test folder in the project folder and loaded into the file using read_csv() method of the pandas module.
-
-Files are then compared and updated so that all the columns match. They are then merged into one single dataset for improving, analyzing and plotting. Redundant columns are deleted.
-
+Files in the test folder are loaded into the script using read_csv() method of the pandas module. The following are 20 random lines of data from the files.
+<p align="center">
+	<img src = "./images/gen_df.png?raw=true" width=45%>
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	<img src = "./images/prenatal_df.png?raw=true" width=45%>
+	<br>
+	<br>
+	<img src = "./images/sports_df.png?raw=true" width=50%>
+</p>
+Files are then compared and updated so that all the columns match. They are then merged into one single dataset for improving, analyzing and plotting. Redundant columns such as "Unnamed: 0", are deleted.
+<p align="center">
+	<br>
+	<img src = "./images/merged_df.png?raw=true" width=50%>
+	<br>
+</p>
 
 ## Stage 2: Improving Dataset
 
@@ -24,8 +37,12 @@ Once the dataset is ready, it is time to process it. To do that, the first step 
 - Replace the NaN values in the bmi, diagnosis, blood_test, ecg, ultrasound, mri, xray, children, months columns with zeroes.
 
 Once the NaN values are handled, values are corrected and normalized.
-Let's take a closer look at the gender column. It's a big mess: there we have female, male, man, woman. Data is to be corrected in this column. The values should be either f or m. 
+Let's take a closer look at the gender column. It's a big mess: there we have female, male, man, woman. The data in this colum needs to be corrected. 
+The values should be either f or m. The improvised dataset is shown below. Once again, 20 random lines of data were extracted from the merged and corrected dataset.
 
+<p align="center">
+  <img src = "./images/improved_df.png?raw=true" width=50%>
+</p>
 
 ## Stage 3: Statistical Analysis
 
@@ -35,7 +52,7 @@ These questions will be answered using statistical methods:
 
 - Which hospital has the highest number of patients?
 	
-    Using mode() function, hospital with the most number of patients is extracted.
+    Using mode() function, hospital with the highest number of patients is extracted.
 
 - What share of the patients in the general hospital suffers from stomach-related issues? Round the result to the third decimal place?
 
@@ -72,7 +89,7 @@ The following graphs will be plotted and the questions will be answered:
 	
 - Build a violin plot of height distribution by hospitals. What is the main reason for the gap in values? Why there are two peaks, which correspond to the relatively small and big values?
 	<p align="center"><img src = "./images/violin_plot.png?raw=true" width=66%></p>
-	The gap between values as well as the presence of two peeks can be explained by the use of two different measurement systems. As the height in both prenatal and general is measured in meters while the sports hospital uses the imperial system (feet), where 1 foot is 0.3048 meters.
+	The gap between values as well as the presence of two peeks can be explained by the use of two different measurement systems. As the height in both prenatal and general is the meter while the sports hospital uses the imperial system, feet where 1 foot is 0.3048 meters
 
 <p align="center"><img src = "./images/plot_data.png?raw=true" width=66%></p>
 
