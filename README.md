@@ -66,7 +66,7 @@ These questions will be answered using statistical methods:
 	
    Using median() method to compare.
 	
-- After data processing at the previous stages, the blood_test column has three values: t= a blood test was taken, f= a blood test wasn't taken, and 0= there is no information. In which hospital the blood test was taken the most often (there is the biggest number of t in the blood_test column among all the hospitals)? How many blood tests were taken?
+- After data processing at the previous stages, the blood_test column has three values: t= a blood test was taken, f= a blood test wasn't taken, and 0= there is no information. In which hospital the blood test was taken the most often? How many blood tests were taken?
 
    Creating a pivot table with values='blood_test' aggfunc='count' to find the hospital with the most blood tests. 
 
