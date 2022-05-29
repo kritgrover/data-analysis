@@ -124,10 +124,12 @@ def plotting():
     print()
     print("     The answer to the 2nd question: Pregnancy")
     print()
-    print("""     The answer to the 3rd question: The gap between values as well as the presence of two peeks
-                  can be explained by the use of two different measurement systems. As the height in both prenatal
-                  and general is the meter while the sports hospital uses the imperial system: feet where a foot is
-                  0.3048 meters""")
+    print("""     The answer to the 3rd question: The gap between values is due to the presence of athletes 
+        in the sports hospital who generally tend to be taller than the general population, 
+        and that other hospitals even include children, which shifts the curve even more. 
+        The presence of two peeks is due to the use of two different measurement systems. 
+        The height in both prenatal and general is measured in meters (m), while the sports hospital uses feet (ft), 
+        where 1 foot is 0.3048 meters.""")
 
 
 if __name__ == '__main__':
@@ -160,7 +162,7 @@ if __name__ == '__main__':
     print()
     statistics()
     print()
-    print("""Plotting and More Analysis:
+    print("""Plotting and Extended Analysis:
     
     1. What is the most common age of a patient among all hospitals? 
        Plot a histogram and choose one of the following age ranges: 0-15, 15-35, 35-55, 55-70, or 70-80.
