@@ -23,11 +23,8 @@ Files in the test folder are loaded into the script using read_csv() method of t
 </p>
 Files are then compared and updated so that all the columns match. They are then merged into one single dataset for improving, analyzing and plotting. Redundant columns such as "Unnamed: 0", are deleted.
 <p>
-  <p align="center">
 	<img src = "./images/merged_df.png?raw=true" width=50%>
-  </p>
 </p>
-
 ## Stage 2: Improving Dataset
 
 Once the dataset is ready, it is time to process it. To do that, the first step is handling NaN (Not a Number) values. 
