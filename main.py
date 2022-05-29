@@ -6,16 +6,15 @@ pd.set_option('display.max_columns', 8)
 general = 'test/general.csv'
 prenatal = 'test/prenatal.csv'
 sports = 'test/sports.csv'
-lines_display = 20
-random_state_value = 30
+hospital_type = 'hospital'
+
+# reading input from csv files
+general_df = pd.read_csv(general)
+prenatal_df = pd.read_csv(prenatal)
+sports_df = pd.read_csv(sports)
 
 
 def generate_df():
-    # reading input from csv files
-    general_df = pd.read_csv(general)
-    prenatal_df = pd.read_csv(prenatal)
-    sports_df = pd.read_csv(sports)
-
     # the column names in all dataframes should match
     prenatal_df.columns = general_df.columns
     sports_df.columns = general_df.columns
@@ -29,13 +28,11 @@ def generate_df():
     return hospitals
 
 
-gender_mapper = {'female': 'f', 'male': 'm', 'woman': 'f', 'man': 'm'}
-gender = 'gender'
-hospital_type = 'hospital'
-zero_columns = ['bmi', 'diagnosis', 'blood_test', 'ecg', 'ultrasound', 'mri', 'xray', 'children', 'months']
-
-
 def improvise_df():
+    gender_mapper = {'female': 'f', 'male': 'm', 'woman': 'f', 'man': 'm'}
+    gender = 'gender'
+    zero_columns = ['bmi', 'diagnosis', 'blood_test', 'ecg', 'ultrasound', 'mri', 'xray', 'children', 'months']
+
     # getting dataset
     hospitals = generate_df()
 
@@ -51,9 +48,6 @@ def improvise_df():
 
     # changing gender values to either 'm' or 'f'
     hospitals.loc[:, gender] = [gender_mapper[gen] if gen in gender_mapper else gen for gen in hospitals[gender]]
-
-    # print the shape of the dataframe
-    # print(hospitals.shape)
 
     return hospitals
 
@@ -91,10 +85,10 @@ def statistics():
 
     # find the difference in median ages of the patient in general and the one in sports
     gen_df = pd.read_csv(general)
-    sports_df = pd.read_csv(sports)
+    sport_df = pd.read_csv(sports)
     gen_median_age = gen_df['age'].median()
-    sports_median_age = sports_df['age'].median()
-    # print(new_table)
+    sports_median_age = sport_df['age'].median()
+
     print(" 4. What is the difference in the median ages of the patients in the general and sports hospitals? ")
     print()
     print("     " + str(gen_median_age - sports_median_age))
@@ -112,7 +106,8 @@ def statistics():
         In which hospital the blood test was taken the most often? 
         How many blood tests were taken?""")
     print()
-    print("     " + str(blood_test_table.index[blood_test_table['blood_test'] == max_blood_test][0]).capitalize(), "had the most with", str(max_blood_test), "blood tests taken.")
+    print("     " + str(blood_test_table.index[blood_test_table['blood_test'] == max_blood_test][0]).capitalize(),
+          "had the most with", str(max_blood_test), "blood tests taken.")
     print()
 
 
@@ -136,6 +131,30 @@ def plotting():
 
 
 if __name__ == '__main__':
+    print()
+    print("General Hospital Database")
+    print()
+    print(general_df.sample(n=20, random_state=30))
+    print()
+    print("Prenatal Hospital Database")
+    print()
+    print(prenatal_df.sample(n=20, random_state=30))
+    print()
+    print("Sports Hospital Database")
+    print()
+    print(sports_df.sample(n=20, random_state=30))
+    print()
+    print()
+    print("Merged Hospital Database")
+    print()
+    hos = generate_df()
+    print(hos.sample(n=20, random_state=30))
+    print()
+    print("Improved Hospital Database")
+    print()
+    hos = improvise_df()
+    print(hos.sample(n=20, random_state=30))
+    print()
     print()
     print("Statistical Analysis of given Hospital Data:")
     print()
