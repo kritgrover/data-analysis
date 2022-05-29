@@ -54,6 +54,8 @@ These questions will be answered using statistical methods:
 
    Creating a pivot table with values='blood_test' aggfunc='count' to find the hospital with the most blood tests. 
 
+<p align="center"><img src = "./images/stats.png?raw=true" width=66%></p>
+
 
 ## Stage 4: Plotting Values and Extended Analysis
 
@@ -62,13 +64,16 @@ Graphics are arguably the most accessible way to represent the data and its stru
 The following graphs will be plotted and the questions will be answered:
 
 - What is the most common age of a patient among all hospitals? Plot a histogram and choose one of the following age ranges: 0-15, 15-35, 35-55, 55-70, or 70-80.
-	
+	<p align="center"><img src = "./images/age_hist.png?raw=true" width=66%></p>
 	From the plotted histogram, it was found that 15-35 was the most common age group.
 
 - What is the most common diagnosis among patients in all hospitals? Create a pie chart.
-
+	<p align="center"><img src = "./images/pie_chart.png?raw=true" width=66%></p>
 	From the generated pie chart, it was found that pregnancy is the most common diagnosis
-
+	
 - Build a violin plot of height distribution by hospitals. What is the main reason for the gap in values? Why there are two peaks, which correspond to the relatively small and big values?
-
+	<p align="center"><img src = "./images/violin_plot.png?raw=true" width=66%></p>
 	The gap between values as well as the presence of two peeks can be explained by the use of two different measurement systems. As the height in both prenatal and general is the meter while the sports hospital uses the imperial system, feet where 1 foot is 0.3048 meters
+
+<p align="center"><img src = "./images/plot_data.png?raw=true" width=66%></p>
+
