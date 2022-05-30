@@ -89,7 +89,7 @@ The following graphs will be plotted and the questions will be answered:
 	
 - Build a violin plot of height distribution by hospitals. What is the main reason for the gap in values? Why there are two peaks, which correspond to the relatively small and big values?
 	<p align="center"><img src = "./images/violin_plot.png?raw=true" width=66%></p>
-	The gap between values is due to the presence of athletes in the sports hospital who generally tend to be taller than the general population, and that other hospitals even include children, which shifts the curve even more. The presence of two peeks is due to the use of two different measurement systems. The height in both prenatal and general is measured in meters (m), while the sports hospital uses feet (ft), where 1 foot is 0.3048 meters.
+	The gap between values is due to the presence of athletes in the sports hospital who generally tend to be taller than the general population, and that other hospitals even include children, which shifts the curve even more. The presence of two peaks is due to the use of two different measurement systems. The height in both prenatal and general is measured in meters (m), while the sports hospital uses feet (ft), where 1 foot is 0.3048 meters.
 
 <p align="center"><img src = "./images/plot_data.png?raw=true" width=75%></p>
 
